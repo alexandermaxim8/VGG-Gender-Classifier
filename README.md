@@ -19,17 +19,18 @@ The objectives of this project:
 ## Getting Started
 ### File Description
 - **Dataset**: Contains images, tabular attributes (images file name, label, index).
-- **Program**: Contains .ipynb file, .py file for model deployment using streamlit.
-- **Output** Folder: .csv files from train test val split resulted from the experiment
+- **VGG_Alex**: .ipynb file for training and evalution.
+- **Output** Folder: .csv files from train test val split resulted from the experiment.
+- **Deploy** Folder: .py file configured with streamlit for local deployment.
 
 ### How to Run
 1. Since the model development was conducted by using Kaggle Notebook, go to kaggle.com -> Create -> New Dataset.
 2. Upload data pop-up will be appeared, pick the zip of all the files inside **Dataset** folder.
-3. Click on the New Notebook widget, the dataset will be shown on the right side. On the upper tab, Files -> Import Notebook -> pick the retrieved .ipynb file from the **Program** folder.
+3. Click on the New Notebook widget, the dataset will be shown on the right side. On the upper tab, Files -> Import Notebook -> pick the retrieved .ipynb file.
 4. Click on three dots option -> Accelerator -> your choice of GPU.
 5. Run all the cell. After the whole runtime is finished, in the output segment on the right side of the panel it will be found .pth files and .csv files.
 6. If there is any issue occured in the middle of the runtime. Use the output files to modify the input of the dataset, hence the training process doesn't need to be started from the very beginning. Try to modify some part of the code, especilly in the data path and to load the saved .pth models/dataloaders/initial_state etc.
-7. Choose the best performing model, put it in the same folder with VGGDeploy.py, adjust the path. Run it with streamlit to try with random image on the web.
+7. Choose the best performing model, put it in the same folder with VGGDeploy.py from **Deploy** folder, adjust the path. Run it with streamlit to try with random image on the web.
 8. Enjoy!
 
 ## Result
