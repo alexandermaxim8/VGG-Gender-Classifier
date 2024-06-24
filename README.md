@@ -17,11 +17,22 @@ Despite the simplicity of gender classification tasks, the model required still 
 </p>
 
 The objectives of this project:
-- Modeling: To build an architecture for gender classification based on the researched model.
-- Optimization: To compare and adjust parameters to achieve accurate predictions and efficient resource usage.
-- Deployment: To develop a basic system that can be practically used for gender classification cases.
+- **Modeling**: To build an architecture for gender classification based on the researched model.
+- **Optimization**: To compare and adjust parameters to achieve accurate predictions and efficient resource usage.
+- **Deployment**: To develop a basic system that can be practically used for gender classification cases.
 
 ## Getting Started
 ### File Description
-
+- **Dataset**: Contains images, tabular attributes (images file name, label, index).
+- **Program**: Contains .ipynb file, .py file for model deployment using streamlit.
+- **Output** Folder: Saved .pth files for each of the resulting trained model, dataloaders, and initial state/weight of the models, .csv files from train test val split.
 ### How to Run
+1. Since the model development was conducted by using Kaggle Notebook, go to kaggle.com -> Create -> New Dataset.
+2. Upload data pop-up will be appeared, pick the zip of all the files inside **Dataset** folder.
+3. Click on the New Notebook widget, the dataset will be shown on the right side. On the upper tab, Files -> Import Notebook -> pick the retrieved .ipynb file from the **Program** folder.
+4. Click on three dots option -> Accelerator -> your choice of GPU.
+5. Run all the cell. After the whole runtime is finished, in the output segment on the right side of the panel it will be found .pth files same as in the **Output** folder as well as .csv files.
+6. If there is any issue occured in the middle of the runtime. Use the output files to modify the input of the dataset, hence the training process doesn't need to be strated from the very beginning. Try to modify some part of the code, especilly in the data path and to load the saved .pth models/dataloaders/initial_state etc.
+7. Additional comments and details is served inside the .ipynb program, enjoy!
+
+## Result
