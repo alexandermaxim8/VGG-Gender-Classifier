@@ -10,4 +10,9 @@ In this context, accuracy becomes a crucial aspect, alongside the efficient use 
 
 Despite the simplicity of gender classification tasks, the model required still accounts on the power of the processing unit. Based on this reason, it is decided to use an early yet decently powerful architecture namely VGG to develop this system. VGG (Visual Geometry Group) was built by Karen Simonyan and Andrew Zisserman on purpose in the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) 2014, as an advancement from its predecessor AlexNet with greater depth. Using small convolutional filters (3x3) in a deep architecture, consisting of 11 to 19 layers. The design is uniform, with convolutional layers followed by ReLU activation functions and max-pooling, then fully connected layers and a softmax/binary classifier.
 
-![alt text{caption=VGG Architecture}](https://machinelearningknowledge.ai/wp-content/uploads/2020/08/Keras-Implementation-of-VGG16-Architecture-2.jpg)
+<p>
+  <img src="https://machinelearningknowledge.ai/wp-content/uploads/2020/08/Keras-Implementation-of-VGG16-Architecture-2.jpg" alt="Description of the image">
+  <br>
+  <em>Figure 1: VGG Architecture.</em>
+</p>
+
