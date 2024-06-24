@@ -49,12 +49,14 @@ To optimize the model, some parameters in the optimizer were varied. Since the f
 *orange: best score
 
 Four major properties are examined, accuracy, F1 Score, Training time, Inference time, and additional for epochs needed for convergency (due to not so accuration assesment).
-The result shows, upon the whole configuration VGG16 with Adam optimizer either with learning rate of 0.00005 or 0.0001 give the best overall performance for gender classification, regardless of abnormal training time needed for lr=0.0001 or 8 epochs for lr = 0.00005. This aligns logically, where a model with less depth also requires less time in training and prediction. Adam, a more complete version of optimizer than RMSProp in general, also correlates with the more accurate result of the model.
+The result shows, upon the whole configuration VGG16 with Adam optimizer either with learning rate of 0.0001 give the best overall performance for gender classification, regardless of abnormal training time needed. This aligns logically, where a model with less depth also requires less time in (supposed to be in the training also) and prediction. Adam, a more complete version of optimizer than RMSProp in general, also correlates with the more accurate result of the model.
 
 VGG16, lr = 0.0001 results output:
 ![image](https://github.com/alexandermaxim8/VGG-Gender-Classifier/assets/143409662/6cb0613c-9957-4b71-9bc9-dc68405071b3)
 ![image](https://github.com/alexandermaxim8/VGG-Gender-Classifier/assets/143409662/edc59b41-bffc-48e5-a1d9-c9a69bf58c60)
 ![image](https://github.com/alexandermaxim8/VGG-Gender-Classifier/assets/143409662/c482b852-5974-421e-8bb7-cda701aa6bd4)
+![image](https://github.com/alexandermaxim8/VGG-Gender-Classifier/assets/143409662/341f8b5f-37db-40d7-a446-f5596c8d034e)
+
 Find out more for others in the .ipynb file
 
 Further exploration:
