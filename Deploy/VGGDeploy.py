@@ -11,7 +11,7 @@ import torch.nn as nn
 def load_model():
     model = models.vgg16()
     model.classifier[6] = nn.Linear(4096, 1)
-    model.load_state_dict(torch.load("vgg16.pth"))
+    model.load_state_dict(torch.load("VGG16_Adam_0.0001_0.pth"))
     model.eval()
     return model
 
@@ -31,7 +31,7 @@ def make_prediction(model, processed_img):
         outputs = outputs.squeeze(1)
         prob = torch.sigmoid(outputs)*100
         predicted = (torch.sigmoid(outputs) > 0.5).float()
-        if prob>50:
+        if prob>60:
             label = "Male"
         else:
             label = "Female"
