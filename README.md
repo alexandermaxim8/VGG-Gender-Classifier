@@ -16,3 +16,8 @@ Despite the simplicity of gender classification tasks, the model required still 
   <em>Figure 1: VGG Architecture.</em>
 </p>
 
+The objectives of this project:
+- Modeling: To build an architecture for gender classification based on the researched model.
+- Optimization: To compare and adjust parameters to achieve accurate predictions and efficient resource usage.
+- Deployment: To develop a basic system that can be practically used for gender classification cases.
+
