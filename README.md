@@ -9,12 +9,7 @@ With the increasing ease of data collection becoming one of the dominant factors
 In this context, accuracy becomes a crucial aspect, alongside the efficient use of resources that provides economic benefits for those utilizing this technology. 
 
 Despite the simplicity of gender classification tasks, the model required still accounts on the power of the processing unit. Based on this reason, it is decided to use an early yet decently powerful architecture namely VGG to develop this system. VGG (Visual Geometry Group) was built by Karen Simonyan and Andrew Zisserman on purpose in the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) 2014, as an advancement from its predecessor AlexNet with greater depth. Using small convolutional filters (3x3) in a deep architecture, consisting of 11 to 19 layers. The design is uniform, with convolutional layers followed by ReLU activation functions and max-pooling, then fully connected layers and a softmax/binary classifier.
-
-<p>
-  <img src="https://machinelearningknowledge.ai/wp-content/uploads/2020/08/Keras-Implementation-of-VGG16-Architecture-2.jpg" alt="Description of the image">
-  <br>
-  <em>Figure 1: VGG Architecture.</em>
-</p>
+![image](https://machinelearningknowledge.ai/wp-content/uploads/2020/08/Keras-Implementation-of-VGG16-Architecture-2.jpg)
 
 The objectives of this project:
 - **Modeling**: To build an architecture for gender classification based on the researched model.
@@ -36,3 +31,14 @@ The objectives of this project:
 7. Additional comments and details is served inside the .ipynb program, enjoy!
 
 ## Result
+### Preprocessing and Cofiguration
+In this project, two type of VGG architecture were employed, VGG16 and VGG19 by using Pytorch library. The dataset itself is originalled retrieved from the CelebA datasat, which already limited to 5017 images, and resized to 178 x 208 px.
+![image](https://github.com/alexandermaxim8/VGG-Gender-Classifier/assets/143409662/01bb0055-c52d-4e06-882f-5a1ac5096880)
+
+In short, before starting the model training, images inside Images folder are filtered based on index inside list_attribute_new.txt (the cleansed version of list_attribute.txt). Also only two properties are used, "202599" and "Male". Subsequently, train test val split is done with the ratio of 7:1.5:1.5. Since the train data has a claas imbalance, the data with majority class are reduced to the same number of the minority class. 
+![image](https://github.com/alexandermaxim8/VGG-Gender-Classifier/assets/143409662/5154bc20-60e5-44d8-a32f-c2f73c0c160c)
+
+It is also important to incorporate additional augmentation to enrich the knowledge of the model, initial randomized transformation with 0.2 probability:
+![image](https://github.com/alexandermaxim8/VGG-Gender-Classifier/assets/143409662/4cc30967-51c0-403c-a686-77872573c0d0)
+
+
